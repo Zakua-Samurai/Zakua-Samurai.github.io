@@ -2,6 +2,7 @@
 Bolt is popular TryHackMe Machine which runs on a vulnerable version of bolt and you can exploit it with just simple steps
 
 ![Main](https://github.com/user-attachments/assets/8c284fd9-e79a-4e07-87c8-c1e914586249)
+![Main](https://github.com/user-attachments/assets/8c284fd9-e79a-4e07-87c8-c1e914586249)
 
 TryhackMe Machines runs on vulnerable system.It allows us to find the structure of a machine like what type of technology it is using and how can we exploit it
 
