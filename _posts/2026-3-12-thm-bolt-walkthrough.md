@@ -175,7 +175,7 @@ searchploit -u
 
 **Now lets use it**
 
-**Searchploit	| Version name**
+**Searchploit	<version>**
 
 ```
 searchploit version
@@ -281,7 +281,7 @@ set LPORT 443
 It is the target's IP address (Machine's IP)
 
 ```
-set IP
+set RHOST <IP>
 ```
 
 **USERNAME**
@@ -289,7 +289,7 @@ set IP
 Set the username which we got from the site 
 
 ```
-set USERNAME 'Username'
+set USERNAME <Username>
 ```
 
 **PASSWORD**
@@ -297,7 +297,7 @@ set USERNAME 'Username'
 Set the password which we got from the site
 
 ```
-set PASSWORD 'Password'
+set PASSWORD <Password>
 ```
 
 Once you are done! hit exploit
@@ -312,7 +312,7 @@ I will use the `ls` command to list the directories
 
 ```
 ls
-````
+```
 
 I didn't get any result because I am in a default directory
 
@@ -321,7 +321,7 @@ I didn't get any result because I am in a default directory
 
 Lets say you are in a Mall and want to ask price for perfume but when you ask someone about the price so he/she says that I am a salesman for clothes not perfumes.
 
-Same goes for directories.If you are in a directory `var/www/ so you will only see the subdirectories or folders under the ```www``` directory
+Same goes for directories.If you are in a directory `var/www/` so you will only see the subdirectories or folders under the `www` directory
 
 So we will try to change our default directory to root
 
