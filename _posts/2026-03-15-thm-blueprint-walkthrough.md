@@ -42,6 +42,7 @@ Once You Start click “Start Machine” then you have to wait for 60 seconds an
 
 Now you have to configure you VPN which you can get from Manage Account < VM and VPN Setting and then download the Configuration file.
 
+![click](/assets/all/click.jpg/)
 
 
 Now we have to configure the VPN Properly:
