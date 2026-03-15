@@ -3,13 +3,14 @@ title: "THM Blueprint Walkthrough"
 date: 2026-03-15
 categories: [Privilege Escalation]
 tags: [web,exploitation]
+toc: True
 ---
 
-# blueprint
+# Blueprint
 
 Blueprint is a THM room which runs on a vulnerable windows 7 operating system.
 
-
+![main](assets/img/main.jpg)
 
 
 
