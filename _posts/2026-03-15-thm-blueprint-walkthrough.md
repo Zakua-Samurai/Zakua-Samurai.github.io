@@ -10,7 +10,7 @@ toc: True
 
 Blueprint is a THM room which runs on a vulnerable windows 7 operating system.
 
-![main](/assets/img/main.jpg)
+
 
 In this room, We will learn about NTLM(New Technology Lan Manager) which is the main thing in this walkthrough
 
@@ -38,7 +38,7 @@ TryHackMe rooms runs on a vulnerable system.We Implement the techniques to hack 
 
 Once You Start click “Start Machine” then you have to wait for 60 seconds and then you will have your Machine’s IP
 
-![IP-address](assets/img/IP-address.jpg)
+
 
 Now you have to configure you VPN which you can get from Manage Account < VM and VPN Setting and then download the Configuration file.
 
