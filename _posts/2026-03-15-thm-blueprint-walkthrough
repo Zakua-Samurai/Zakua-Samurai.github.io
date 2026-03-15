@@ -1,8 +1,8 @@
 ---
-title: "THM-Blueprint-Walkthrough"
+title: "THM Blueprint Walkthrough"
 date: 2026-03-15
-categories: [TryHackMe]
-tags: [NTLM,exploitation,CTF]
+categories: [Privilege Escalation]
+tags: [web,exploitation]
 ---
 
 # blueprint
