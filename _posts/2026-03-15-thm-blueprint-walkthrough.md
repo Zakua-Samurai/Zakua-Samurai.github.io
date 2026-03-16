@@ -84,23 +84,69 @@ Here I have specified different flags.Lets understand what they do
 
 ```-A``` → used for a Aggressive scan
 
-We got the Results
+### We got the Results
 
 ![nmap results](/assets/img/blueprint/nresult.png)
 
 As you can see there are multiple ports open here but we will interact with `port 8080` which runs on http
 
 So I have opened the site with:`http://IP:8080`
-
-and got these results
-
+ 
 ![open browser](/assets/img/blueprint/open.png)
+ 
+and got this result
+
+![opened the url](/assets/img/blueprint/uccess.png)
 
 As we know that this server runs on oscommerce 2.3.4
 
 ![know the service on port:8080](/assets/img/blueprint/check.png)
 
+So,We know about the directories of the victum's system which we will use to locate the vulnerability
 
+---
+
+
+## Finding the Exploit
+
+We will search online on Exploit-db for the particular vulnerable system (oscommerce 2.3.4)
+
+### What is Exploit-db
+
+Exploit-DB is an open-source platform where developers, hackers and organizations share exploits against vulnerable systems.
+
+Website:
+
+```bash
+https://www.exploit-db.com/
+
+```
+Or we can use it in Kali Linux.
+
+First install exploitdb:
+
+```bash
+sudo apt install exploitdb
+```
+If you already installed it you can update it.
+
+```bash
+searchsploit -u
+```
+
+Now search the exploit.
+
+```bash
+searchsploit version
+```
+
+real-line command:
+
+```bash
+searchsploit oscommerce 2.3.4
+```
+
+We got some exploits but we will use this one `50128`
 
 
 
