@@ -52,9 +52,11 @@ Now you have to configure you VPN which you can get from Manage Account < VM and
 
 Now we have to configure the VPN Properly:
 
-After Downloading the VPM Configuration file run this command
+After Downloading the VPN Configuration file run this command
 
+```bash
 sudo openvpn example.ovpn
+```
 
 Now we can work on it
 
