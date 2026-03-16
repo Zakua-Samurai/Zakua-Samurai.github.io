@@ -64,6 +64,8 @@ Now we can work on it
 
 ## Service Enumeration
 
+The first step is to enumerate what ports are open and what kind of technology the victim is using.
+
 We will start with Nmap.A Powerful tool for Network Scanning
 
 ```bash
@@ -72,8 +74,31 @@ sudo nmap -sC -sV -A IP
 
 Here I have specified different flags.Lets understand what they do
 
+```sudo``` → used to execute a command with elevated privileges
 
+```nmap``` → used to Initialize nmap
 
+```-sC``` → used to enable the Default Script scan
+
+```-sV``` → used for Service Version Detection
+
+```-A``` → used for a Aggressive scan
+
+We got the Results
+
+![nmap results](/assets/img/blueprint/nresult.png)
+
+As you can see there are multiple ports open here but we will interact with `port 8080` which runs on http
+
+So I have opened the site with:`http://IP:8080`
+
+and got these results
+
+![open browser](/assets/img/blueprint/open.png)
+
+As we know that this server runs on oscommerce 2.3.4
+
+![know the service on port:8080](/assets/img/blueprint/check.png)
 
 
 
