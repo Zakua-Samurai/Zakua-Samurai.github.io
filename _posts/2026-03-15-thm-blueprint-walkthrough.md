@@ -48,9 +48,9 @@ Now you have to configure you VPN which you can get from Manage Account < VM and
 
 ![click](/assets/all/click.jpg/)
 
-![](/assets/img/all/download.jpg)
-
 Now we have to configure the VPN Properly:
+
+![download](/assets/all/download.jpg)
 
 After Downloading the VPN Configuration file run this command
 
@@ -59,6 +59,20 @@ sudo openvpn example.ovpn
 ```
 
 Now we can work on it
+
+---
+
+## Service Enumeration
+
+We will start with Nmap.A Powerful tool for Network Scanning
+
+```bash
+sudo nmap -sC -sV -A IP
+```
+
+Here I have specified different flags
+
+
 
 
 
