@@ -18,6 +18,7 @@ We will learn about Privilege escalation
 
 ---
 
+
 ## Privilege Escalation
 
 ![privilege](/assets/img/blueprint/privilege.png)
@@ -28,7 +29,6 @@ Privilege Escalation is a cyberattack where a user or application gains unauthor
 
 ---
 
----
 
 ## What are TH(TryHackMe) rooms ?
 
@@ -36,7 +36,6 @@ TryHackMe rooms runs on a vulnerable system.We Implement the techniques to hack 
 
 ---
 
----
 
 ## VPN Configuration
 
@@ -62,7 +61,10 @@ Now we can work on it
 
 ---
 
+
 ## Service Enumeration
+
+![this](/assets/all/yeah)
 
 We will start with Nmap.A Powerful tool for Network Scanning
 
