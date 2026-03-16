@@ -102,7 +102,7 @@ As we know that this server runs on oscommerce 2.3.4
 
 ![know the service on port:8080](/assets/img/blueprint/check.png)
 
-So,We know about the directories of the victum's system which we will use to locate the vulnerability
+So we know about the directories of the victum's system which we will use to locate the vulnerability.
 
 ---
 
@@ -276,12 +276,13 @@ lets see the flag:
 type C:\Users\Administrator\Desktop\root.txt.txt
 ```
 
+![saw the flag](/assets/img/blueprint/dir4.png)
 
+# Congratulation! on completing your first Question
 
+ Now lets move forward to the 2nd question which is very Important for Privilege Escalation
 
-
-
-
+# Stay Tuned
 
 
 
