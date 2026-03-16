@@ -166,10 +166,10 @@ searchsploit -m php/webapps/50128.py
 
 # Organizing the exploit
 
-Next we will change the exploit name from `50128.py` to `THM-blueprint-oscommerce-2.3.4` so we could easily remember the exploit
+Next we will change the exploit name from `50128.py` to `THM-blueprint-oscommerce-2.3.4.py` so we could easily remember the exploit
 
 ```bash
-mv 50128.py THM-blueprint-oscommerce-2.3.4
+mv 50128.py THM-blueprint-oscommerce-2.3.4.py
 ```
 
 ---
@@ -207,7 +207,7 @@ If you used only
 
 then the exploit would try:
 
-```/oscommerce-2.3.4/install/install.php```
+`/oscommerce-2.3.4/install/install.php`
 
 But that file doesn't exist there, so the exploit fails.
 
@@ -217,11 +217,11 @@ You give the exploit the directory where the vulnerable application actually run
 
 Wrong path
 
-```/oscommerce-2.3.4/install/install.php ❌```
+`/oscommerce-2.3.4/install/install.php ❌`
 
 Correct path
 
-```/oscommerce-2.3.4/catalog/install/install.php ✅```
+`/oscommerce-2.3.4/catalog/install/install.php ✅`
 
 ### Finding the flag
 
@@ -231,9 +231,8 @@ We will use `dir` to list the contents of the directory and `type` to view a fil
 
 Run:
 
-```bash
- dir
-```
+`dir`
+
 
 we did run the command but got nothing helpful
 
