@@ -64,15 +64,15 @@ Now we can work on it
 
 ## Service Enumeration
 
-![this](/assets/all/yeah)
-
 We will start with Nmap.A Powerful tool for Network Scanning
 
 ```bash
 sudo nmap -sC -sV -A IP
 ```
 
-Here I have specified different flags
+Here I have specified different flags.Lets understand what they do
+
+
 
 
 
