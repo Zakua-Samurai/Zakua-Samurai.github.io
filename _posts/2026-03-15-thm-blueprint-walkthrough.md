@@ -27,6 +27,7 @@ Privilege Escalation is a cyberattack where a user or application gains unauthor
 
 ![](/assets/img/blueprint/escalation.gif)
 
+
 ---
 
 
