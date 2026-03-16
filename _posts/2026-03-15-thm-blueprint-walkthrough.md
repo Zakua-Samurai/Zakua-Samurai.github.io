@@ -20,7 +20,11 @@ We will learn about Privilege escalation
 
 ## Privilege Escalation
 
+![privilege](/assets/img/blueprint/privilege.png)
+
 Privilege Escalation is a cyberattack where a user or application gains unauthorized, higher-level permissions (e.g., admin or root) than intended.
+
+![](/assets/img/blueprint/escalation.gif)
 
 ---
 
@@ -43,6 +47,7 @@ Once You Start click “Start Machine” then you have to wait for 60 seconds an
 Now you have to configure you VPN which you can get from Manage Account < VM and VPN Setting and then download the Configuration file.
 
 ![click](/assets/all/click.jpg/)
+
 
 
 Now we have to configure the VPN Properly:
