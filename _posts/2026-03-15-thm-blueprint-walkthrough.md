@@ -202,7 +202,7 @@ This file exists inside the catalog directory of osCommerce.
 
 If you used only
 
-```http://IP:8080/oscommerce-2.3.4```
+`http://IP:8080/oscommerce-2.3.4`
 
 then the exploit would try:
 
@@ -226,12 +226,12 @@ Correct path
 
 We will use `dir` to list the contents of the directory and `type` to view a file.
 
-Lets try to discover the flag
+**Lets try to discover the flag**
 
 Run:
 
 ```bash
-dir
+ dir
 ```
 
 we did run the command but got nothing helpful
