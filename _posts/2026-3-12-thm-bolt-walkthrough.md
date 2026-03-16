@@ -3,6 +3,7 @@ title: "THM Bolt Walkthrough"
 date: 2026-03-14
 categories: [TryHackMe]
 tags: [ctf, web, metasploit]
+toc: True
 ---
 
 # Bolt
