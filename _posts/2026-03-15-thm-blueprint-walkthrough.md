@@ -48,7 +48,7 @@ Now you have to configure you VPN which you can get from Manage Account < VM and
 
 ![click](/assets/all/click.jpg/)
 
-
+![](/assets/img/all/download.jpg)
 
 Now we have to configure the VPN Properly:
 
