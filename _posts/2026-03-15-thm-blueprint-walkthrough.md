@@ -386,7 +386,7 @@ After doing this we have to install the files in our kali machine
 
 These files are often in the `/install/includes`
 
-![](/assets/img/blueprint/success.jpg)
+![found the SAM file](/assets/img/blueprint/success.png)
 
 **Yeah we got the files**
 
