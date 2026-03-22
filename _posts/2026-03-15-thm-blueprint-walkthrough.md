@@ -397,7 +397,9 @@ Now we will use dnsdump2 tool
 # What this tool does
 
 **1.** Extracts BootKey from SYSTEM
+
 **2.** Uses BootKey to decrypt SAM
+
 **3.** Extracts NTLM hashes
 
 `cd Downloads/` → because the SYSTEM and SAM file is located here
