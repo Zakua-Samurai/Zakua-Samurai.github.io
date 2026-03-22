@@ -373,7 +373,7 @@ But they are encrypted.
 
 You need both files:
 
-**File | Purpose**
+**File Purpose**
 
 SAM | contains user password hashes
 SYSTEM | contains BootKey used to decrypt SAM
@@ -391,6 +391,32 @@ These files are often in the `/install/includes`
 **Yeah we got the files**
 
 Download them by just clicking on them
+
+Now we will use dnsdump2 tool 
+
+# What this tool does
+
+**1.** Extracts BootKey from SYSTEM
+**2.** Uses BootKey to decrypt SAM
+**3.** Extracts NTLM hashes
+
+`cd Downloads/` → because the SYSTEM and SAM file is located here
+
+```bash
+dnsdump2 SYSTEM SAM
+```
+
+And you got the lab key
+
+
+
+---
+
+## Decrypting the hash
+
+`https://crackstation.net`
+
+Paste your hash and then you will got the results
 
 
 
