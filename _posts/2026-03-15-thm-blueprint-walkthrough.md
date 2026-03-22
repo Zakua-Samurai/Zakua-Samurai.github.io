@@ -408,7 +408,7 @@ dnsdump2 SYSTEM SAM
 
 And you got the lab key
 
-
+![got the lab keys](/assets/img/blueprint/success1.png)
 
 ---
 
@@ -418,8 +418,8 @@ And you got the lab key
 
 Paste your hash and then you will got the results
 
+![found the decrypted word](/assets/img/blueprint/congrats.png)
 
-
-
+**Congratulations on completing this walkthrough**
 
 
