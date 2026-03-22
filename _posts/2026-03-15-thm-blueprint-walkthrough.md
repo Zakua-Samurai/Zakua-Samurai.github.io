@@ -280,9 +280,118 @@ type C:\Users\Administrator\Desktop\root.txt.txt
 
 # Congratulation! on completing your first Question
 
- Now lets move forward to the 2nd question which is very Important for Privilege Escalation
+# Now lets move forward to the 2nd question which is very Important for Privilege Escalation
 
-# Stay Tuned
+---
+
+## Q2. "Lab" user NTLM hash decrypted
+
+# They are Asking us to find and Enter the Lab NTLM hash decrypted
+
+It may feel difficult but don't worry, I will make it easy to understand
+
+### What is NTLM
+
+NTLM stands for New Technology Lan Manager or (NT Lan Manager)
+
+NTLM is a Windows authentication protocol used to verify a user without sending the real password over the network.
+
+Instead of sending the password, it uses a challenge–response mechanism with password hashes.
+
+So the password is never sent directly.
+
+### 2. Key Idea Behind NTLM
+
+The server challenges the client, and the client proves it knows the password by responding with a hash.
+
+Think of it like this:
+
+Server:
+
+If you know the password, prove it.
+
+Client:
+
+Here is a response created using the password hash.
+
+### How NTLM Works
+
+In Windows, user password hashes are stored in the SAM (Security Account Manager).
+
+File: SAM
+Location: C:\Windows\System32\config\SAM
+
+But there is a problem:
+
+❌ You cannot directly read it even as administrator because it is locked by the system.
+
+So attackers use another method
+
+### How to find NTLM Password hashes
+
+To find the password hashes we will run these commands:
+
+```bash
+reg.exe save hklm\system SYSTEM
+reg.exe save hklm\sam SAM
+```
+
+![hklm save](/assets/img/blueprint/hklm.png)
+
+![](/assets/img/blueprint/hklm1.png)
+
+This command is used to create a backup or a raw copy of the Windows Registry SYSTEM hive. 
+
+### What the command does
+
+`reg.exe` → This is the core command that tells Windows to save a copy of a specified registry key (a hive) to a disk file
+
+`hklm\system` → This is the target registry hive, specifically HKEY_LOCAL_MACHINE\SYSTEM, which contains crucial information for booting the system, driver configuration, and system settings
+
+`SYSTEM` → This is the name of the file that will be created to store the data. The file is saved in the raw hive format, not in a human-readable text format
+
+This saves the SYSTEM registry hive to a file called SYSTEM.
+
+The SYSTEM hive contains a BootKey.
+
+This key is important because:
+
+➡ Windows encrypts SAM hashes using this BootKey
+
+`reg.exe save hklm\sam SAM`
+
+This saves the SAM registry hive to a file called SAM.
+
+This file contains:
+
+usernames
+password hashes (NTLM)
+
+But they are encrypted.
+
+# Why Both Files Are Needed
+
+You need both files:
+
+**File | Purpose**
+
+SAM | contains user password hashes
+SYSTEM | contains BootKey used to decrypt SAM
+
+Without SYSTEM → hashes cannot be decrypted.
+
+After doing this we have to install the files in our kali machine
+
+### How to download the SAM and SYSTEM file
+
+These files are often in the `/install/includes`
+
+![](/assets/img/blueprint/success.jpg)
+
+**Yeah we got the files**
+
+Download them by just clicking on them
+
 
 
 
