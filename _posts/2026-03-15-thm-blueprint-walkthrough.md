@@ -280,13 +280,13 @@ type C:\Users\Administrator\Desktop\root.txt.txt
 
 # Congratulation! on completing your first Question
 
-# Now lets move forward to the 2nd question which is very Important for Privilege Escalation
+Now lets move forward to the 2nd question which is very Important for Privilege Escalation
 
 ---
 
 ## Q2. "Lab" user NTLM hash decrypted
 
-# They are Asking us to find and Enter the Lab NTLM hash decrypted
+They are Asking us to find and Enter the Lab NTLM hash decrypted
 
 It may feel difficult but don't worry, I will make it easy to understand
 
