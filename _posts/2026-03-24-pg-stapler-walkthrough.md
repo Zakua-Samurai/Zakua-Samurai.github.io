@@ -16,27 +16,49 @@ The machine is known for having multiple attack vectors—including FTP, SMB, an
 
 These Machines run on vulnerable systems.It allows us to find the structure of a machine like what type of technology it is using and how can we exploit it.
 
-We just have to start the Machine:
+--
 
-Image
+## How to deploy machine
 
-Once You Start click “Start Machine” then you have to wait for 60 seconds and then you will have your Machine’s IP
+**Important:**
 
-Image
+You have to connect the openvpn before starting the machine otherwise there will be a web-interface
 
-Now you have to configure you VPN which you can get from Manage Account < VM and VPN Setting and then download the Configuration file.
+### How to Install the VPN
 
+When you are on this stage so you will see the VPN option at left side
 
-Image
-Image
-Image
+![how to find and start machine](/assets/img/pg-stapler/vpn.png)
 
-Now we have to configure the VPN Properly:
+Now have to start the Machine:
+
+![how to find and start machine](/assets/img/pg-stapler/find.png)
+
+![how to find and start machine](/assets/img/pg-stapler/find2.png)
+
+![how to find and start machine](/assets/img/pg-stapler/find3.png)
 
 After Downloading the VPM Configuration file run this command
 
+```bash
 sudo openvpn example.ovpn
+```
 
 Now we can work on it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
