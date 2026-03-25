@@ -30,6 +30,10 @@ When you are on this stage so you will see the VPN option at left side
 
 ![how to find and start machine](/assets/img/pg-stapler/vpn.png)
 
+```bash
+sudo openvpn example.ovpn
+```
+
 Now have to start the Machine:
 
 ![how to find and start machine](/assets/img/pg-stapler/find.png)
@@ -40,9 +44,7 @@ Now have to start the Machine:
 
 After Downloading the VPM Configuration file run this command
 
-```bash
-sudo openvpn example.ovpn
-```
+
 
 Now we can work on it
 
