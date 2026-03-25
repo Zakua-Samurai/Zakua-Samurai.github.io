@@ -1,7 +1,7 @@
 ---
 title: PG Stapler Walkthrough
 date: 2026-03-24
-categories: Offsec | Proving-Grounds
+categories: Offsec Proving-Grounds
 tags: exploitation,metasploit,web,smb
 toc: True
 ---
