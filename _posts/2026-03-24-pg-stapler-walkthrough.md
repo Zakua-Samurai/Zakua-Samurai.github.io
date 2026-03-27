@@ -270,7 +270,7 @@ cd ../../../../../../../../../
 ```
 
 ```bash
-cd /
+cd /root
 ```
 
 Now you go in any folder
